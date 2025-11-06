@@ -2,7 +2,7 @@ let debounceTimer;
 let fuse = null;
 let fullData = [];
 
-const API_URL = '/api/skf/pdv';
+const API_URL = 'https://skfpdv-production.up.railway.app/api/skf/pdv';
 
 // Cargar los datos de la API
 async function loadData() {
