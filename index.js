@@ -11,10 +11,10 @@ const AUTH_HEADERS = {
 
 app.use(cors());
 
-app.get("/api/pork/pdv", async (req, res) => {
+app.get("/api/skf/pdv", async (req, res) => {
     try {
         const response = await fetch(
-            "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/Pork_PDVs",
+            "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/PDV_leads",
             { headers: AUTH_HEADERS }
         );
         const data = await response.json();

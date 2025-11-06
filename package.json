@@ -1,7 +1,7 @@
 {
-  "name": "pork-proxy",
+  "name": "skf-proxy",
   "version": "1.0.0",
-  "description": "Proxy para pork",
+  "description": "Proxy para SKF",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
