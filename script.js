@@ -2,7 +2,7 @@ let debounceTimer;
 let fuse = null;
 let fullData = [];
 
-const API_URL = 'https://pork-production.up.railway.app/api/pork/pdv';
+const API_URL = '/api/skf/pdv';
 
 // Cargar los datos de la API
 async function loadData() {
@@ -26,7 +26,7 @@ async function loadData() {
 // Inicializar Fuse.js para búsqueda rápida
 function initializeFuse() {
     const options = {
-        keys: ['SAP','PDV','CORPORATIVO','FORMATO'],
+        keys: ['SAP','PDV','CIUDAD','BARRIO_PDV','DIRECCION'],
         threshold: 0.3,
     };
     fuse = new Fuse(fullData, options);
@@ -64,7 +64,9 @@ function renderResults(results) {
                         <li><strong>SAP:</strong> ${result.SAP || 'N/A'}
                         <i class="material-icons copy-icon" onclick="copyToClipboard('${result.SAP}')">content_copy</i>
                         </li>
+                        <li><strong>PDV:</strong> ${result.PDV || 'N/A'}</li>
                         <li><strong>Ciudad:</strong> ${result.CIUDAD || 'N/A'}</li>
+                        <li><strong>Barrio:</strong> ${result.BARRIO_PDV || 'N/A'}</li>
                         <li><strong>Dirección:</strong> ${result.DIRECCION || 'N/A'}</li>
 
                     </ul>
